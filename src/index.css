@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Spacing and Positioning Classes */
+
+.full-height {
+   height: 100%;
+}
+
+.full-width { 
+  width: 100%;
+}
+
+.full-size {
+  height: 100%;
+  width: 100%;
+}
+
+.top-spacer-small {
+  padding-top: 0.5rem;
+}
+
+.top-spacer {
+  padding-top: 1rem;
+}
+
+.top-spacer-large {
+  padding-top: 1.5rem;
+}
+
+.bottom-spacer-small {
+  padding-bottom: 0.5rem;
+}
+
+.bottom-spacer {
+  padding-bottom: 1rem;
+}
+
+.bottom-spacer-large {
+  padding-bottom: 1.5rem;
+}
+
+.right-spacer-small {
+  padding-right: 0.5rem;
+}
+
+.right-spacer {
+  padding-right: 1rem;
+}
+
+.right-spacer-large {
+  padding-right: 1.5rem;
+}
+
+.left-spacer-small {
+  padding-left: 0.5rem;
+}
+
+.left-spacer {
+  padding-left: 1rem;
+}
+
+.left-spacer-large {
+  padding-left: 1.5rem;
+}
