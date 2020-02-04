@@ -1,76 +1,172 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  overflow-x: hidden;
+  --main-green: #6CAE75;
+  --secondary-green: #8BBD8B;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Typography */
+
+h1 {
+  font-size: 3rem;
+  color: var(--main-green);
+  font-family: 'Gloria Hallelujah', sans-serif;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 4rem;
+    color: var(--main-green);
+    font-family: 'Gloria Hallelujah', sans-serif;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Overpass', sans-serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-green);
+  font-family: 'Overpass', sans-serif;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-family: 'Gloria Hallelujah', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Overpass', sans-serif;
+}
+
+.white-text {
+  color: #fff;
 }
 
 /* Spacing and Positioning Classes */
 
 .full-height {
-   height: 100%;
+  height: 100%;
 }
 
 .full-width { 
-  width: 100%;
+ width: 100%;
 }
 
 .full-size {
-  height: 100%;
-  width: 100%;
+ height: 100%;
+ width: 100%;
 }
 
 .top-spacer-small {
-  padding-top: 0.5rem;
+ padding-top: 0.5rem;
 }
 
 .top-spacer {
-  padding-top: 1rem;
+ padding-top: 1rem;
 }
 
 .top-spacer-large {
-  padding-top: 1.5rem;
+ padding-top: 1.5rem;
 }
 
 .bottom-spacer-small {
-  padding-bottom: 0.5rem;
+ padding-bottom: 0.5rem;
 }
 
 .bottom-spacer {
-  padding-bottom: 1rem;
+ padding-bottom: 1rem;
 }
 
 .bottom-spacer-large {
-  padding-bottom: 1.5rem;
+ padding-bottom: 1.5rem;
 }
 
 .right-spacer-small {
-  padding-right: 0.5rem;
+ padding-right: 0.5rem;
 }
 
 .right-spacer {
-  padding-right: 1rem;
+ padding-right: 1rem;
 }
 
 .right-spacer-large {
-  padding-right: 1.5rem;
+ padding-right: 1.5rem;
 }
 
 .left-spacer-small {
-  padding-left: 0.5rem;
+ padding-left: 0.5rem;
 }
 
 .left-spacer {
-  padding-left: 1rem;
+ padding-left: 1rem;
 }
 
 .left-spacer-large {
-  padding-left: 1.5rem;
+ padding-left: 1.5rem;
+}
+
+.no-margins {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Global Containers */
+.content-container {
+  padding: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .content-container {
+    padding: 2rem 8rem;
+  }
+}
+
+/* Buttons */
+.primary-button {
+  padding: 1rem 2rem;
+  background-color: var(--main-green);
+}
+
+/* Custom Classes */
+.heroContainer {
+  min-height: 600px;
+  background-size: cover;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.53);
+}
+
+@media screen and (min-width: 900px) {
+  .heroContainer {
+    padding-right: 5rem;
+  }
+}
+
+.heroSubtext {
+
+}
+
+@media screen and (min-width: 900px) {
+  .heroSubtext {
+    margin-top: -2.2rem;
+    padding-right: 9rem;
+  }
+}
+
+.footer {
+  background-color: #6CAE75;
+  padding: 1rem 0;
 }
