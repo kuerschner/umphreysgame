@@ -1,6 +1,6 @@
-import React from 'react'
-import SongInput from '../components/SongInput'
-import { Button } from '@material-ui/core'
+import React from 'react';
+import SongInput from '../components/SongInput';
+import { Button } from '@material-ui/core';
 import { useFormik } from 'formik';
 
 const Board = (props) => {
@@ -33,10 +33,10 @@ const Board = (props) => {
             instrumental1: '',
             instrumental2: '',
             instrumental3: '',
-            wildcard: '',
+            wildcard: ''
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            console.log(JSON.stringify(values, null, 2));
         },
     });
     return (
@@ -48,6 +48,7 @@ const Board = (props) => {
                 </div>
             </div>
             <div className='row center-xs middle-xs full-width'>
+                <form onSubmit={formik.handleSubmit}>
                 <div className='col-xs-12'>
                     <h2>Setlist Picks</h2>
                     <p>Number of points correspond with number associated on the line. The goal is to get the most points.</p>
@@ -144,8 +145,6 @@ const Board = (props) => {
                         value={formik.values}
                     />
                 </div>
-            </div>
-            <div className='row center-xs middle-xs full-width'>
                 <div className='col-xs-12'>
                     <h2>Additional Points</h2>
                 </div>
@@ -158,8 +157,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='15' 
                         type='additional' 
@@ -168,8 +165,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='15' 
                         type='additional' 
@@ -178,8 +173,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='10' 
                         type='additional' 
@@ -188,8 +181,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='10' 
                         type='additional' 
@@ -198,8 +189,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='10' 
                         type='additional' 
@@ -208,8 +197,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='5' 
                         type='additional' 
@@ -218,8 +205,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='5' 
                         type='additional' 
@@ -228,8 +213,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='5' 
                         type='additional' 
@@ -238,8 +221,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='5' 
                         type='additional' 
@@ -248,8 +229,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='5' 
                         type='additional' 
@@ -258,8 +237,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='5' 
                         type='additional' 
@@ -268,8 +245,6 @@ const Board = (props) => {
                         onChange={formik.handleChange}
                         value={formik.values}
                     />
-                </div>
-                <div className='col-xs-12'>
                     <SongInput 
                         points='25' 
                         type='additional' 
@@ -279,11 +254,10 @@ const Board = (props) => {
                         value={formik.values}
                     />
                 </div>
-            </div>
-            <div className='row center-xs middle-xs full-width'>
                 <div className='col-xs-12 top-spacer bottom-spacer'>
-                    <Button className='primary-button' style={{backgroundColor: 'var(--main-green)', padding: '1rem 2rem', color: '#fff'}} onClick={formik.onSubmit}>Save My Picks</Button>
+                    <Button className='primary-button' style={{backgroundColor: 'var(--main-green)', padding: '1rem 2rem', color: '#fff'}} type='submit'>Save My Picks</Button>
                 </div>
+                </form>
             </div>
         </>
     )
